@@ -360,6 +360,8 @@
             await deleteDepartment(offspringIds);
             Message.success(t('common.deleteSuccess'));
             initTree(true);
+          } else {
+            Message.warning(t('org.deleteExistUserDepartment'));
           }
         } catch (error) {
           // eslint-disable-next-line no-console
